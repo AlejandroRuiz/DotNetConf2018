@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:local="clr-namespace:FormsApp"
+             Title="Dashboard"
+             Icon="baseline_dashboard_black"
+  x:Class="FormsApp.MainPage">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+            <BoxView Color="OrangeRed" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="20" WidthRequest="20" />
+            <Label TextColor="White" Text="CUSTOM TITLE VIEW" FontSize="Large" FontAttributes="Bold" />
+            <BoxView Color="CornflowerBlue" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="20" WidthRequest="20" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <StackLayout Padding="0,50,0,0" Spacing="20" CompressedLayout.IsHeadless="true">
+        <!-- Place new controls here -->
+        <Label HorizontalTextAlignment="Center">
+            <Label.FormattedText>
+                  <FormattedString>
+                      <Span Text="Helo To Xamarin.Forms " />
+                      <Span Text=" Click Me!!!!!! " TextColor="Blue">
+                          <Span.GestureRecognizers>
+                                 <TapGestureRecognizer Tapped="Handle_Tapped" />
+                           </Span.GestureRecognizers>
+                      </Span>
+                      <Span Text="Awesome"/>
+                  </FormattedString>
+             </Label.FormattedText>
+        </Label>
+        <Button HorizontalOptions="Center" Text="PADDING BUTTON" Padding="20" FontSize="Medium" TextColor="White" BackgroundColor="CadetBlue" />
+    </StackLayout>
+</ContentPage>
